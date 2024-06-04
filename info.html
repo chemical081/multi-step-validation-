@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+
+    <p>Username: <span id="usernameDisplay"></span></p>
+    <p>Birthdate: <span id="birthdateDisplay"></span></p>
+    <p>Phone number: <span id="phoneDisplay"></span></p>
+    <p>Phone number: <span id="phoneDisplay"></span></p>
+    
+    
+    <script>
+        const usernameDisplay = document.getElementById('usernameDisplay');
+        const birthdateDisplay = document.getElementById('birthdateDisplay');
+        const phoneDisplay = document.getElementById('phoneDisplay');
+
+        // Access and parse stored data (if it exists)
+        const storedUserData = localStorage.getItem('userData');
+        let userData;
+        if (storedUserData) {
+            userData = JSON.parse(storedUserData);
+
+            // Display data if retrieved successfully
+            usernameDisplay.textContent = userData.username;
+            birthdateDisplay.textContent = userData.birthdate;
+            phoneDisplay.textContent = userData.phone;
+        } else {
+            // Handle case where no data is stored (optional)
+            console.log("No user data found in local storage");
+        }
+    </script>
+</body>
+</html>
