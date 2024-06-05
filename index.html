@@ -8,32 +8,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <form action="" id="form1" class="active">
+
+<!-- making a form for to store all the divs -->
+    
+    <form action="" id="form1">
         <div class="validation">
-            <h1>Validation Form</h1>
+            <h1>Validation Form</h1> <!--title-->
         </div>
 
+
+        <!--input section-->
         <div class="first-name">
-            <label for="name">First Name</label>
-            <input id="first-name" type="text" placeholder="Input your First Name" required >
-            <p class="error">***Invalid Name***</p>
+            <label for="name">First Name</label> 
+            <input id="first-name" type="text" placeholder="Input your First Name" required > 
+            <p class="error">***Invalid Name***</p> <!--error -->
         </div>
-        <div class="middle-name">
+        <div class="middle-name"> 
             <label for="middle-name">Middle Name</label><span>  (optional)</span>
             <input id="middle-name" type="text" placeholder="Input your Middle Name">
         </div>
         <div class="last-name">
             <label for="last name">Last Name</label>
             <input id="last-name" type="text" placeholder="Input your Last Name" required>
-            <p class="error">***Invalid Name***</p>
+            <p class="error">***Invalid Name***</p> <!--error -->
         </div>
+        <!--end of input section-->
 
+        <!--button-->
         <div class="buttons">
             <button type="submit">Next</button>
         </div>
     </form>
 
-
+<!--end of first form-->
 
 
 
