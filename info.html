@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Page</title>
+    <title>Welcome</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <div class="titles">
+        <h2>Congratulations!!!</h2>
+        <h4>you have sucessfully signed up!</h4>
+    </div>
 
-    <p>Username: <span id="usernameDisplay"></span></p>
-    <p>Birthdate: <span id="birthdateDisplay"></span></p>
-    <p>Phone number: <span id="phoneDisplay"></span></p>
-    <p>Phone number: <span id="phoneDisplay"></span></p>
-    
-    
+    <div class="information">
+        <p class="name">Your Name is: <span id="firstName"></span></p>
+        <p class="birth">Date of birth: <span id="birthDate"></span></p>
+        <p class="username">UserName: <span id="username"></span></p>
+        <p class="email">Email: <span id="email"></span></p>
+        <p class="phone">Contact: <span id="phone"></span></p>
+    </div>
+
     <script>
-        const usernameDisplay = document.getElementById('usernameDisplay');
-        const birthdateDisplay = document.getElementById('birthdateDisplay');
-        const phoneDisplay = document.getElementById('phoneDisplay');
+        // Retrieve values from local storage
+        const firstName = localStorage.getItem('First-Name');
+        const birthDate = localStorage.getItem('birthdate');
+        const username = localStorage.getItem('username');
+        const email = localStorage.getItem('email');
+        const phone = localStorage.getItem('phone');
 
-        // Access and parse stored data (if it exists)
-        const storedUserData = localStorage.getItem('userData');
-        let userData;
-        if (storedUserData) {
-            userData = JSON.parse(storedUserData);
-
-            // Display data if retrieved successfully
-            usernameDisplay.textContent = userData.username;
-            birthdateDisplay.textContent = userData.birthdate;
-            phoneDisplay.textContent = userData.phone;
-        } else {
-            // Handle case where no data is stored (optional)
-            console.log("No user data found in local storage");
-        }
+        // Set the retrieved values to the corresponding HTML elements
+        document.getElementById('firstName').textContent = firstName;
+        document.getElementById('birthDate').textContent = birthDate;
+        document.getElementById('username').textContent = username;
+        document.getElementById('email').textContent = email;
+        document.getElementById('phone').textContent = phone;
     </script>
 </body>
 </html>

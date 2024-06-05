@@ -26,8 +26,13 @@ form.addEventListener("submit", function(e) {
     if (allValid) {
         // Redirect to another page if all validations pass
         window.location.href = "last_page.html"; 
-})
 
+    const mail = email.value;
+    }
+    // storing the value from the inputs in local storage
+    localStorage.setItem("Email", mail); //storing the email as mail
+
+    });
 
 //functions 
 

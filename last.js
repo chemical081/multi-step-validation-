@@ -25,6 +25,15 @@ form.addEventListener("submit", function(e){
         window.location.href = "second_page.html"; // Example of navigation to another page
     }
 
+    const un = username.value;
+    const bd = birthdate.value;
+    const ph = phone.value;
+
+    // storing the value from the inputs in local storage
+    localStorage.setItem("username", un); //storing the email as mail
+    localStorage.setItem("birthdate", bd);//storing the birthdate as bd
+    localStorage.setItem("phone", ph); //storing the phone number as ph
+
 })
 
 //functions
