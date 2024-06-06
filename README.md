@@ -2,6 +2,8 @@
 
 - This is a multi Step Validation Form written in Html, CSS and Javascript.
 
+![a screenshot of the app](github.png)
+
 
 ## Structure
 - This project has been with 8 different files inside of it.
